@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background: url("img/mario-bg.jpg");
+    background-size: cover;
+}
+
+#board {
+    width: 540px;
+    height: 540px;
+    /* background-color: green; */
+
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+
+    background: url("img/soil.png");
+    background-size: cover;
+    border: 3px solid white;
+    border-radius: 25px;
+}
+
+
+#board div {
+    /* board = 540 x 540, divide into 3x3 tiles --> 180 x 180 per div */
+    width: 180px; 
+    height: 180px;
+    background-image: url("img/pipe.png");
+    background-size: cover;
+}
+
+#board div img {
+    /* all img tags inside tiles */
+    width: 120px;
+    height: 120px;
+    margin-top: 35px;
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+/* Button CSS*/
+button {
+    background-color: #4c63af;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block; 
+    font-size: 16px;
+    font-weight: bold; 
+    margin: 10px 5px; 
+    border-radius: 10px; 
+    cursor: pointer; 
+    box-shadow: 0 4px #2e3c7d; 
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+button:hover {
+    background-color: #456fa0;
+    transform: scale(1.1); 
+}
+
+button:active {
+    background-color: #3e538e;
+    box-shadow: 0 2px #1b1f5e;
+    transform: scale(1.05); 
+}
+
+button:disabled {
+    background-color: #d3d3d3; 
+    color: #808080; 
+    cursor: not-allowed; 
+    box-shadow: none; 
+}
